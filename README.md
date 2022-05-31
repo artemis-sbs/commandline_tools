@@ -8,32 +8,33 @@ Used to fetch Missions that are on github
 
 Place this file in the data\missions directory
 
-FETCH <github-user> <github-repository> [<rename>] [<github-branch or tag>]
-    - github user is the user or organization that host the repository (e.g. artemis-sbs)
-    - github-repository is the name of the mission (e.g. CruiserTournament)
-    - rename optional rename the mission directory
-    - github-branch optional defaults to main/master 
-    -- a branch is a snapshot of a version of the mission
+FETCH github-user github-repository [rename] [github-branch or tag]
+
+- github user is the user or organization that host the repository (e.g. artemis-sbs)
+- github-repository is the name of the mission (e.g. CruiserTournament)
+- rename optional rename the mission directory
+- github-branch optional defaults to main/master 
+    - a branch is a snapshot of a version of the mission
 
 ### Examples
 
 Install the Cruiser Tournament Mission Script
 
-''' cmd
+``` cmd
 fetch artemis-sbs CruiserTournament
-'''
+```
 
 Copy the sbs-example mission and rename it. This is a good way to install a starter boilerplate template
 
-''' cmd
+``` cmd
 fetch artemis-sbs sbs-example my-new-mission
-'''
+```
 
 Install the Cruiser Tournament Mission Script using the branch beta-v2
 
-''' cmd
+``` cmd
 fetch artemis-sbs CruiserTournament CruiserTournament beta-v2
-'''
+```
 
 
 
