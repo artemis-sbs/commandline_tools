@@ -17,23 +17,24 @@ FETCH github-user github-repository [rename] [github-branch or tag]
     - a branch is a snapshot of a version of the mission
 
 ### Examples
+Run from the command line in the data\missions folder
 
 Install the Cruiser Tournament Mission Script
 
 ``` cmd
-fetch artemis-sbs CruiserTournament
+.\fetch artemis-sbs CruiserTournament
 ```
 
 Copy the sbs-example mission and rename it. This is a good way to install a starter boilerplate template
 
 ``` cmd
-fetch artemis-sbs sbs-example my-new-mission
+.\fetch artemis-sbs sbs_example my-new-mission
 ```
 
 Install the Cruiser Tournament Mission Script using the branch beta-v2
 
 ``` cmd
-fetch artemis-sbs CruiserTournament CruiserTournament beta-v2
+.\fetch artemis-sbs CruiserTournament CruiserTournament beta-v2
 ```
 
 
