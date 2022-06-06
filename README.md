@@ -3,6 +3,9 @@ Command line batch files etc. for managing Artemis Cosmos missions
 
 This is a simple way to install "DLC" provided the DLC is stored on github
 
+
+Place these file in the data\missions directory
+
 ## Fetch.bat
 Used to fetch Missions that are on github
 
@@ -40,9 +43,17 @@ Install the Cruiser Tournament Mission Script using the branch beta-v2
 
 
 ## pip-install.bat
-Include this file in a mission to install any python libraries used in the mission.
-libraries used are listed in requirements.txt following the same rules as python pip
-This batch file will also check to make sure Artemis Cosmos has Pip and install it if it is missing.
+This used to install and dependencies.
 
-pip-install.bat is call by fetch. or needs to be called manually if not using fetch
+Dependencies are listed in requirements.txt in the folder for you mission. e.g. data\missions\sbs_example\requirements.txt
+
+
+Place this file in the data\missions directory
+
+pip-install.bat is called by fetch. or needs to be called manually if not using fetch
+
+``` cmd
+.\pip-install sbs_example
+```
+
 

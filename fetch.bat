@@ -24,8 +24,8 @@
     ECHO Mission or Branch not found
     goto:eof
 )
-if exist %MISSION%\pip_install.bat (
-    @CALL %MISSION%\pip_install.bat 
+if exist pip_install.bat (
+    @CALL pip_install.bat %MISSION%
     @cd /d "%~dp0"
 )
 
