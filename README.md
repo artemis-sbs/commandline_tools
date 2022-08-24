@@ -42,7 +42,7 @@ Install the Cruiser Tournament Mission Script using the branch beta-v2
 
 
 
-## pip-install.bat
+## pip_install.bat
 This used to install and dependencies.
 
 Dependencies are listed in requirements.txt in the folder for you mission. e.g. data\missions\sbs_example\requirements.txt
@@ -50,10 +50,31 @@ Dependencies are listed in requirements.txt in the folder for you mission. e.g. 
 
 Place this file in the data\missions directory
 
-pip-install.bat is called by fetch. or needs to be called manually if not using fetch
+pip_install.bat is called by fetch. or needs to be called manually if not using fetch
 
 ``` cmd
-.\pip-install sbs_example
+.\pip_install sbs_example
 ```
+
+
+
+## lib_install.bat
+This used to install and dependencies that are sbslib files.
+
+sbslib is a alternative to pip, and does not git either. (but does use github)
+
+a sbslib is a zip file with the code for the library.
+
+
+Place this file in the data\missions directory
+
+lib_install.bat is called by fetch. or needs to be called manually if not using fetch
+
+
+``` cmd
+.\lib_install mymission artemis-sbs sbs_utils v0.0.4
+```
+this will place sbs_utils.sbslib in the mymission folder from the v0.0.4 release on github.
+
 
 

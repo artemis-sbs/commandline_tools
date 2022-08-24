@@ -24,10 +24,16 @@
     ECHO Mission or Branch not found
     goto:eof
 )
-if exist pip_install.bat (
+if exist %MISSION%\requirements.txt (
     @CALL pip_install.bat %MISSION%
     @cd /d "%~dp0"
 )
+
+@if exist %MISSION%\sbslib.txt (
+    @for /f "tokens=*" %%x in (%MISSION%\sbslib.txt) do @CALL lib_install %MISSION% %%x
+    @cd /d "%~dp0"
+)
+
 
 @if exist mission.tgz (
  @del mission.tgz
