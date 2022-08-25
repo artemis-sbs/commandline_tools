@@ -1,9 +1,11 @@
 @cd /d "%~dp0"
 
+
 @set MISSION=%~1
 @set USER=%~2
 @set REPO=%~3
 @set VERSION=%~4
+@set ADDON="%~dp0"\..\..\PyAddons
 
 @if "%~4" == "" (
   @ECHO Need to specify VERSION
@@ -32,11 +34,11 @@
 )
 
 :WRITEIMPORT
-@set PYFILE=%MISSION%\sbslibs.py
+@set PYFILE=%ADDON%\sbslibs.py
 @ECHO import sys> %PYFILE%
 @ECHO import os>> %PYFILE%
 
-@ECHO dir = os.path.dirname(os.path.realpath(__file__)) >> %PYFILE%
+@ECHO dir = os.path.dirname(sys.modules['script'].__file__) >> %PYFILE%
 
 @ECHO for filename in os.listdir(dir): >> %PYFILE%
 @ECHO     f = os.path.join(dir, filename) >> %PYFILE%
