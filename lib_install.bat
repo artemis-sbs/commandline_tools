@@ -27,7 +27,7 @@
 
 @REM https://github.com/artemis-sbs/sbs_utils/releases/download/v0.0.4/sbs_utils.sbslib
 
-@curl -f -L --max-redirs 5 "https://github.com/%USER%/%REPO%/releases/download/%VERSION%/%REPO%.sbslib" --output .\%MISSION%\%REPO%.sbslib
+@curl -f -L --max-redirs 5 "https://github.com/%USER%/%REPO%/releases/download/%VERSION%/%REPO%_%VERSION%.sbslib" --output .\%MISSION%\%REPO%_%VERSION%.sbslib
 @if %ERRORLEVEL% NEQ 0 (
     @ECHO Library or version not found
     goto:eof
